@@ -1,5 +1,27 @@
-<h1>New User</h1>
+<% provide(:title, "Sign up") %>
+<div class="container vertical-center">
+	
+	<h1 class="text-center">Sign up</h1>
 
-<%= render 'form', user: @user %>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+			<%= form_for(@user) do |f| %>
+				<%= render 'shared/error_messages' %>
+				<%= f.label :name %>
+				<%= f.text_field :name, class: 'form-control' %>
+				<%= f.label :email %>
+				<%= f.text_field :email, class: 'form-control' %>
+				<%= f.label :password %>
+				<%= f.password_field :password, class: 'form-control' %>
+				
+				<%= f.label :password_comfirmation, "Confirmation" %>
+				
+				<%= f.password_field :password_comfirmation, class: 'form-control' %>
+				
+				<br>
 
-<%= link_to 'Back', users_path %>
+				<%= f.submit "Create my account", class: "btn btn-primary form-control" %>
+			<% end %>
+		</div>
+	</div>
+</div>

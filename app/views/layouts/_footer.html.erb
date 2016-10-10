@@ -1,13 +1,14 @@
-<footer class="footer">
-<small>
-	<a href="http://railstutorial.org/">Rails Tutorial</a>
-	by Me
-</small>
-<nav>
-	<ul>
-		<li><%= link_to "About", about_path %></li>
-		<li><%= link_to "Contact", contact_path %></li>
-		<li><a href="http://news.railstutorial.org/">News</a></li>
-	</ul>
-</nav>
+<footer>
+	<div class="container ">
+		<ul class="nav navbar-nav">
+			<li><%= link_to 'Ruby on Rails Tutorial', 'http://www.railstutorial.org'  %></li>			
+		</ul>
+		<nav>
+			<ul class="nav navbar-nav pull-right">
+				<li><%= link_to 'About', about_path %></li>
+				<li><%= link_to 'Contact', '#' %></li>
+				<li><%= link_to 'News', '#' %></li>
+			</ul>
+		</nav>
+	</div>
 </footer>
